@@ -5,6 +5,9 @@ Essa função realiza a limpeza dos dados brutos retirados do site da ESALQ.
 
 import pandas as pd
 
+import warnings
+warnings.filterwarnings("ignore")
+
 def limpando_dados(df):
     
     # Alterando nomes das colunas:
@@ -16,6 +19,7 @@ def limpando_dados(df):
     # Trocando virgula por ponto e transformando em float
     for col in list(df.columns)[1:]:
         df[col] = df[col].apply(lambda x: x.replace(',', '.')).astype(float)
+
     
     # Transformando em data
     df['data'] = pd.to_datetime(df['data'], format = '%d/%m/%Y')
