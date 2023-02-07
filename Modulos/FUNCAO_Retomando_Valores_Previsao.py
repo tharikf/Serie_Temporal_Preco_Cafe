@@ -6,8 +6,10 @@ Essa função realiza a transformação de volta de dados previstos no dataset d
 
 import pandas as pd
 
+
 def retomando_valor_previsto(dataframe_original, dataframe_diferenciado):
     
+
     # Lista Vazia
     lista_vazia = []
     
