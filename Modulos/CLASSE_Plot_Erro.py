@@ -5,6 +5,7 @@ Essa classe tem como objetivo reunir e plotar informações dos resíduos da pre
 
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
 class PlotResiduos:
 
@@ -17,7 +18,7 @@ class PlotResiduos:
         # Calculando Residuo
         self.dataframe['Residuos'] = self.dataframe.iloc[:, 0] - self.dataframe.iloc[:, 1]
 
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (8, 6))
+        fig, [(ax1, ax2), (ax3, ax4)] = plt.subplots(2, 2, figsize = (12, 10))
         
         # Scatterplot Valores Reais e Residuos
         ax1.scatter(self.dataframe.iloc[:, 0], self.dataframe['Residuos'])
@@ -26,6 +27,12 @@ class PlotResiduos:
 
         # QQ Plot dos Residuos
         sm.graphics.qqplot(self.dataframe['Residuos'], line = 'r', ax = ax2)
+
+        # ACF dos resíduos
+        plot_acf(self.dataframe['Residuos'], lags = 10, ax = ax3)
+
+        # PACF dos resíduos
+        plot_pacf(self.dataframe['Residuos'], lags = 10, ax = ax4)
 
         return plt.show()
 
