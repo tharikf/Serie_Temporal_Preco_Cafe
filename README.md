@@ -8,7 +8,7 @@ Percebe-se a importância da soja para o país e para o mundo. Não é para meno
 
 Diante desse cenário, pode ser de grande importância prever o comportamento dos preços da soja para alguns setores. Com esse objetivo que este projeto é realizado. Faremos a investigação da série de preços da saca de 60kg da soja, série que pode ser encontrada no site destacado acima. Além disso, aplicaremos técnicas de séries temporais para avaliar a possibilidade da previsão dos preços dessa série.
 
-O link do notebook é o seguinte: https://github.com/tharikf/Serie_Temporal_Preco_Soja/blob/main/Notebook_Projeto_Serie_Temporal_Soja.ipynb
+O link do notebook é o seguinte: https://nbviewer.org/github/tharikf/Serie_Temporal_Preco_Soja/blob/main/Notebook_Projeto_Serie_Temporal_Soja.ipynb
 
 <p align="center">
   <img src="soja.jpg" width="740" title="hover text">
